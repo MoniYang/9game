@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/all.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="header_fullwidth" class="header">
+      <div class="d-flex flex-wrap justify-content-between container">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png"></a>
+        </div>
+        <div id="header" class="header__nav">
+            <div id="nav-border">
+              <button class="mobileNav__btn close"></button>
+              <div  class="header__topNav">
+                <button class="mobileNav--Closebtn d-lg-none d-block"><i class="fas fa-times"></i></button>
+                <ul class="order-lg-1 order-2">
+                  <li><a href="index.html">首頁</a></li>
+                  <li><a href="game.html">六駒一路發</a></li>
+                  <li><a href="game.html">天牌撲克</a></li>
+                  <li><a href="game.html">賽魷魷</a></li>
+                  <li><a href="contact.html">連絡我們</a></li>
+                </ul>
+                <ul class="user__area order-lg-2 order-3">
+                  <li><button  type="button" data-toggle="modal" data-target="#LoginModal">登入</button></li>
+                  <li><button  type="button" data-toggle="modal" data-target="#DepositModal">儲值</button></li>
+                  <li><button  type="button">勇者<span>[300g]</span></button></li>
+                </ul>
+                <div class="lang order-lg-3 order-1">
+                  <ul id="LangList">
+                    <li><button>EN</button></li>
+                    <li class="active"><button >繁</button></li>
+                    <li><button>簡</button></li>
+                    <li><button>JP</button></li>
+                  </ul>
+                </div>
+              </div>
+            
+              <button class="mobileNav--close"></button>
+            
+            </div>  
+        </div>
+      </div>
+    </div>
+    <div class="index_slider owl-carousel owl-theme">
+      <div class="item">
+        <img src="images/banner/banner_1.png" alt="">
+      </div>
+    </div>
+    <section class="main">
+      <div class="container">
+        <div class="game_slider owl-carousel owl-theme">
+          <div class="item">
+            <a href="">
+              <img src="images/game/0032.png" alt="">
+              <p>遊戲介紹</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="images/game/0031.png" alt="">
+              <p>遊戲介紹</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="images/game/0026.png" alt="">
+              <p>遊戲介紹</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="newsSlider">
+        <div class="container">
+          <div class="title">最新消息</div>
+          <div class="newsSlider__Slider owl-carousel owl-theme">
+            <div class="item">
+              <div class="col-lg-6 offset-lg-3">
+                <p>這是一則最新消息，儲值就給你10%加碼送，儲越多賺越多！
+                  ​新玩家註冊直接送3000g幣一起玩！用完每天都補滿300g幣繼續玩～
+                  響應東奧！賽馬大使募集中，立馬狂奔加入一起賽！
+                  伺服器於2021/10/24日AM2:00-AM7:00進行停機維護。
+                  消息區高度會變動，最多一次呈現五條訊息。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="indexInfo">
+        <div class="col-6 p-0 indexInfo--pic" style="background-image: url('images/demo.png');">
+        </div>
+        <div class="col-6 p-0">
+          <div class="indexInfo__textContent">
+            <h3 class="indexInfo--title">
+              Evnet title
+            </h3>
+            <h3 class="indexInfo--title">
+              Evnet title
+            </h3>
+            <p class="indexInfo--text">Event description</p>
+            <p class="indexInfo--text">Event description</p>
+            <p class="indexInfo--text">Event description</p>
+            <p class="indexInfo--text">Event description</p>
+          </div>
+        </div>
+      </div>
+      <div class="social__area">
+        <div class="col-6 social--item social--fb"><i class="fab fa-facebook-f"></i></div>
+        <div class="col-6 social--item social--line"><i class="fab fa-line"></i></div>
+      </div>
+    </section>
+    
+    <div id="footer" class="footer">
+      <div class="container">
+         
+          <div class="col-12">
+            <div class="copyright">
+              <div class="d-flex flex-wrap">
+                <div class="col-12  order-lg-1 order-2 mt-1 mt-lg-0 p-0">
+                  <p class="text-center">©2021 9game online | Park Dragon Co., LTD.</p>
+                  <p class="text-center"> <a href="">service@9gameonline.com</a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade " id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog  modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="LoginModalLabel">會員登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="d-flex flex-wrap justify-content-center">
+            <li>
+              <button><img src="images/icon/google.png" alt=""></button>
+            </li>
+            <li >
+              <button><img src="images/icon/facebook.png" alt=""></button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade show" id="DepositModal" tabindex="-1" role="dialog" aria-labelledby="DepositModalLabel"
+  aria-hidden="true" style="display: block;">
+  <div class="modal-dialog deposit modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">會員登入</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="d-none flex-column justify-content-center deposit__list ">
+          <li>
+            <button><img src="images/icon/gash.png" alt=""></button>
+          </li>
+          <li >
+            <button><img src="images/icon/mycard.png" alt=""></button>
+          </li>
+        </ul>
+        <ul class="d-flex flex-column justify-content-center deposit__MoneyList">
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li><span>$50</span></li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li><span>$50</span></li>
+              </ul>
+
+            </button>
+          </li>
+          <li>
+            <button type="button"><img src="images/icon/mycard.png" alt=""></button>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="scripts/bootstrap.js"></script>
+  <script src="scripts/bootstrap.bundle.js"></script> -->
+  <script src="scripts/owl.carousel.js"></script>
+  <script src="scripts/owl.carousel.js"></script>
+
+  <script src="scripts/custom.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
