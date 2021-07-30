@@ -109,7 +109,12 @@ input {
 	z-index: 100;
 	padding:10px 0;
 	background-color:$theme;
-
+	@include rwdw(1199){
+		.container{
+			width:100%;
+			padding:padding:10px 10%;
+		}
+	}
 	&__nav{
 		display:flex;
 		width:calc(100% - 230px);
@@ -301,6 +306,10 @@ button {
 		padding: 20px;
 		background-color:$theme;
 		border-radius: 15px;
+		.modal-sm &{
+			max-width: 300px;
+			margin:0 auto;
+		}
 	}	
 }
 
@@ -337,17 +346,60 @@ button {
 			border-radius: 30px;
 			display:flex;
 			justify-content: center;
-			padding:5px 0;
+			padding:5px 30px;
 			margin-bottom: 10px;
 			position:relative;
 
 			button{
-
+				width:100%;
 			}
 		}
 	}
+	&__MoneyItem{
+		display:flex;
+		flex-direction: row;
+		width:100%;
+		justify-content: space-between;
+		li{
+			color:$theme;
+			margin-bottom: 0px;
+			padding:0px;
+			display:flex;
+			align-items: center;
+			background-color:transparent;
+			&:hover,
+			&:active,
+			&:focus{
+				box-shadow: 0px 0px;
+				transform: translateY(0px);
+			}
+		}	
+	}
 }
-
+.loginIcon{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	// justify-content: center;
+	width: 170px;
+	li{
+		padding:5px;
+	}
+}
+.inputText{
+	background-color:$white;
+		border-radius: 30px;
+		color:$black;
+		padding:5px 15px;
+		i{
+			color:$theme;
+		}
+}
+.inputBox{
+	input{
+		@extend .inputText;
+	}
+}
 .lang{
 	display: flex;
 	align-items:center;
@@ -366,6 +418,7 @@ button {
 			align-items:center;
 			width: auto;
 			border:1px solid $white;
+		
 			button{
 				font-size:(1);
 				padding:2px 10px;

@@ -1161,6 +1161,10 @@ button:focus {
   background-color: #963af1;
   border-radius: 15px;
 }
+.modal-sm .modal-content {
+  max-width: 300px;
+  margin: 0 auto;
+}
 
 .deposit__MoneyList, .deposit__list {
   display: flex;
@@ -1188,10 +1192,52 @@ button:focus {
   border-radius: 30px;
   display: flex;
   justify-content: center;
-  padding: 5px 0;
+  padding: 5px 30px;
   margin-bottom: 10px;
   position: relative;
 }
+.deposit__MoneyList li button {
+  width: 100%;
+}
+.deposit__MoneyItem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.deposit__MoneyItem li {
+  color: #963af1;
+  margin-bottom: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.deposit__MoneyItem li:hover, .deposit__MoneyItem li:active, .deposit__MoneyItem li:focus {
+  box-shadow: 0px 0px;
+  transform: translateY(0px);
+}
+
+.loginIcon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 170px;
+}
+.loginIcon li {
+  padding: 5px;
+}
+
+.inputText, .inputBox input {
+  background-color: #fff;
+  border-radius: 30px;
+  color: #1a1a1a;
+  padding: 5px 15px;
+}
+.inputText i, .inputBox input i {
+  color: #963af1;
+}
+
 .lang {
   display: flex;
   align-items: center;
