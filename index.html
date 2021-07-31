@@ -20,7 +20,7 @@
         </div>
         <div id="header" class="header__nav">
             <div id="nav-border">
-              <button class="mobileNav__btn close"></button>
+              <button class="mobileNav__btn d-lg-none close"></button>
               <div  class="header__topNav">
                 <button class="mobileNav--Closebtn d-lg-none d-block"><i class="fas fa-times"></i></button>
                 <ul class="order-lg-1 order-2">
@@ -31,9 +31,11 @@
                   <li><a href="contact.html">連絡我們</a></li>
                 </ul>
                 <ul class="user__area order-lg-2 order-3">
-                  <li><button  type="button" data-toggle="modal" data-target="#LoginModal">登入</button></li>
-                  <li><button  type="button" data-toggle="modal" data-target="#DepositModal">儲值</button></li>
-                  <li><button  type="button" data-toggle="modal" data-target="#ChangeNameModal">勇者<span>[300g]</span></button></li>
+                  <li class="login--btn"><button  type="button" data-toggle="modal" data-target="#LoginModal">登入</button></li>
+                  
+                  <li class="deposit--Btn"><button  type="button" data-toggle="modal" data-target="#DepositModal">儲值</button></li>
+                  <li class="ChageName--btn"><button  type="button" data-toggle="modal" data-target="#ChangeNameModal">勇者<span>[300g]</span></button></li>
+                  <li class="deposit--Btn"><button  id="logout" type="button">登出</button></li>
                 </ul>
                 <div class="lang order-lg-3 order-1">
                   <ul id="LangList">
@@ -96,9 +98,9 @@
         </div>
       </div>
       <div class="indexInfo">
-        <div class="col-6 p-0 indexInfo--pic" style="background-image: url('images/demo.png');">
+        <div class="p-0 indexInfo--pic" style="background-image: url('images/demo.png');">
         </div>
-        <div class="col-6 p-0">
+        <div class="col-lg-6 col-12 p-0">
           <div class="indexInfo__textContent">
             <h3 class="indexInfo--title">
               Evnet title
@@ -114,8 +116,8 @@
         </div>
       </div>
       <div class="social__area">
-        <div class="col-6 social--item social--fb"><i class="fab fa-facebook-f"></i></div>
-        <div class="col-6 social--item social--line"><i class="fab fa-line"></i></div>
+        <button class="col-6 social--item social--fb"><i class="fab fa-facebook-f"></i></button>
+        <button class="col-6 social--item social--line"><i class="fab fa-line"></i></button>
       </div>
     </section>
     
@@ -156,12 +158,39 @@
           </ul>
         </div>
         <div class="modal-footer">
+          <div class="d-flex flex-row">
+            <input type="checkbox" name="cc" />
+            <button data-toggle="modal" data-target="#TermsModal">我同意使用者條款</button>
+          </div>
           <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="DepositModal" tabindex="-1" role="dialog" aria-labelledby="DepositModalLabel" aria-hidden="true">
+  <div class="modal fade" id="TermsModal" tabindex="-1" role="dialog" aria-labelledby="TermsModalLabel" aria-hidden="true">
+    <div class="modal-dialog terms modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title">點數儲值</h5>
+          <h5 class="modal-title">選擇Gash金額</h5> -->
+          <h5 class="modal-title">使用者條款</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="terms_box">
+            <iframe src="https://www.lipsum.com/feed/html" width="100%" frameborder="0"></iframe>
+          </div>  
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="defult_btn" data-dismiss="modal">關閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="DepositModal" tabindex="-1" role="dialog" aria-labelledby="DepositModalLabel" aria-hidden="true" >
     <div class="modal-dialog deposit modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -173,7 +202,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <ul class="d-none flex-column justify-content-center deposit__list ">
+          <ul class=" deposit__list ">
             <li>
               <button><img src="images/icon/gash.png" alt=""></button>
             </li>
@@ -181,7 +210,7 @@
               <button><img src="images/icon/mycard.png" alt=""></button>
             </li>
           </ul>
-          <!-- <ul class="d-flex flex-column justify-content-center deposit__MoneyList">
+          <ul class="deposit__MoneyList">
             <li>
               <button type="button">
                 <ul class="deposit__MoneyItem">
@@ -254,24 +283,24 @@
                 </ul>
               </button>
             </li>
-          </ul> -->
-          <!-- <ul class="text-white">
+          </ul>
+          <ul class="deposit__info1 text-white">
             <li><span>遊戲：</span>9ＧameOnline</li>
             <li><span>帳號：</span>勇者</li>
             <li><span>金額：</span>＄300</li>
-          </ul> -->
-          <!-- <ul class="text-white">
+          </ul>
+          <ul class="deposit__info2 text-white">
             <li>儲值成功</li>
             <li><span>目前餘額：</span>300,000g</li>
-          </ul> -->
-          <ul class="text-white">
+          </ul>
+          <ul class="deposit__info3 text-white">
             <li>儲值失敗</li>
             <li><span>目前餘額：</span>＄0</li>
           </ul>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
-          <button type="button" class="defult_btn" data-dismiss="modal">確定</button>
+        <div class="modal-footer flex-row">
+          <button type="button" id="clear" class="defult_btn" data-dismiss="modal">取消</button>
+          <button type="button" id="submit" class="defult_btn" data-dismiss="modal">確定</button>
         </div>
       </div>
     </div>
@@ -296,8 +325,9 @@
             </li>
           </ul>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer flex-row">
           <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
+          <button type="button" class="defult_btn" data-dismiss="modal">確定</button>
         </div>
       </div>
     </div>
@@ -312,9 +342,21 @@
   <script src="scripts/owl.carousel.js"></script>
 
   <script src="scripts/custom.js"></script>
+  <div id="fb-root"></div>
   <script>
-
-  </script>
+      window.fbAsyncInit = function() { FB.init({
+      xfbml : true,
+      version : 'v11.0' });
+      };
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js'; fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <!-- Your Chat Plugin code --> <div class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="104167105257980"> </div>
 </body>
 
 </html>

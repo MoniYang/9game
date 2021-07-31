@@ -106,7 +106,45 @@
       $('.mobileNav--close').hide();
 
     });
+    $('.deposit__info3').hide();
+    $('.deposit__info1').hide();
+    $('.deposit__info2').hide();
+    $('.deposit__MoneyList').hide();
+    $('.deposit__list li').click(function(){
+      $('.deposit__list').hide();
+      $('.deposit__MoneyList').show();
+ 
+    });
+    $('.deposit__MoneyList li').click(function(){
+      $('.deposit__MoneyList').hide();
+      $('.deposit__info1').show();
+    
+    });
+    $('#submit').click(function(){
+      $('.deposit__info1').hide();
+      $('.deposit__info2').show();
+      $('.deposit__info3').hide();
+    });
+    $('#clear').click(function(){
+      $('.deposit__info2').hide();
+      $('.deposit__info3').show();
+    });
 
+    $('.inputBox').hide();
+    $('.inputText').click(function(){
+      $('.inputText').hide();
+      $('.inputBox').show();
+    });
+
+    $('.login--btn').show();
+    $('.deposit--Btn').hide();
+    $('.ChageName--btn').hide();
+    $('#llogout').hide();
+    $('.loginIcon li').click(function(){
+      $('.login--btn').hide();
+      $('.deposit--Btn').show();
+    $('.ChageName--btn').show();
+    });
 //    var dropbtn = document.querySelector('.dropdown--btn');
     
 //     dropbtn.addEventListener('click',Closedrop);

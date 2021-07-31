@@ -75,6 +75,44 @@ input {
 		background-color: #1a1a1a;
 	}
 }
+
+input[type="checkbox"] {
+	width:20px;
+	height:20px;
+	margin-right:5px;
+    // display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#f2f2f2;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin:0px 5px 0 0;
+	vertical-align:middle;
+	background-color:$white;
+	border-radius: 3px;
+    // background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+	cursor:pointer;
+	
+}
+
+input[type="checkbox"]:checked + label span {
+	&:after{
+		content:"\f00c";
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		color:$theme;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+   
+}
+
 .text-red {
 	color: #FF4136;
 }
@@ -107,14 +145,21 @@ input {
 	justify-content: space-between;
 	top: 0;
 	z-index: 100;
-	padding:10px 0;
+	// padding:10px 0;
 	background-color:$theme;
-	@include rwdw(1199){
-		.container{
-			width:100%;
-			padding:padding:10px 10%;
+	.container{
+		padding-top:10px;
+		padding-bottom: 10px;
+		@include rwdw(1199){
+			
+			max-width:100%;
+			padding:10px 15px;
+		}
+		@include rwdw(991){
+			padding:10px 10px;
 		}
 	}
+
 	&__nav{
 		display:flex;
 		width:calc(100% - 230px);
@@ -166,7 +211,7 @@ input {
 				padding:0 10px;
 				cursor: pointer;
 				@include rwdw(1199){
-					padding:0 8px;
+					padding:0 5px;
 				}
 				@include rwdw(991){
 					width:100%;
@@ -301,6 +346,9 @@ button {
 	&-footer{
 		border-top:0px;
 		justify-content: center;
+		display: flex;
+		padding:0px;
+		flex-direction:column;
 	}
 	&-content{
 		padding: 20px;
@@ -311,6 +359,18 @@ button {
 			margin:0 auto;
 		}
 	}	
+}
+.terms_box{
+	position: relative;
+	padding-bottom: 58%; // This is the aspect ratio
+	overflow: hidden;
+	iframe{
+		position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	}
 }
 
 .deposit{
@@ -469,9 +529,19 @@ button {
 	display:flex;
 	flex-direction: row;
 	min-height:70vh;
+	@include rwdw(991){
+		flex-direction: column;
+		min-height:auto;
+	}
 	&--pic{
 		background-size:cover;
 		background-position: center;
+		width:50%;
+		@include rwdw(991){
+			height:450px;
+			// flex:1;
+			width:100%;
+		}
 	}
 	&__textContent{
 		padding:50px 10%;
@@ -490,10 +560,14 @@ button {
 .social{
 	&__area{
 		display: flex;
+	
 	}
 	&--item{
 		padding:30px 0px;
 		text-align: center;
+		@include rwdw(991){
+			padding:15px 0;
+		}
 		i{
 			color:$white;
 			font-size:font(3);
@@ -505,6 +579,36 @@ button {
 	}
 	&--line{
 		background-color:#00be3d;
+	}
+	&--lineicon{
+		a{
+			color:#00be3d;
+			display: flex;
+		}
+		color:#00be3d;
+	}
+	&--messenger{
+		a{
+			color:#0076fb;
+			display: flex;
+		}
+	}
+	&__inner{
+		background-color:$light;
+		padding:30px 0;
+		ul{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			li{
+				margin:0 20px;
+				a{
+					i{
+						font-size:font(5);
+					}
+				}
+			}
+		}
 	}
 }
 .index{
@@ -530,7 +634,6 @@ button {
 	
 
 }
-
 .close{
 	opacity: 1;
 	text-shadow: 0 0px 0 transparent;
@@ -540,14 +643,16 @@ button {
 
 	}
 }
+
 .mobileNav{
 	&__btn{
 		color: #fff;
 		display: none;
+		
 		@include rwdw(991){
 			display: flex;
-		align-items: center;
-		width:40px;
+			align-items: center;
+			width:40px;
 		i{
 			font-size:font(1.5);
 		}
@@ -565,7 +670,8 @@ button {
 		}
 		&.close{
 			opacity: 1;
-			
+			display:flex;
+			justify-content: center ;
 			&:after{
 				content:"\f0c9";
 				font-family: 'Font Awesome 5 Free';
@@ -638,6 +744,9 @@ button {
 		align-items: center	;
 
 		width:auto!important;
+		@include rwdw(1199){
+			padding:3px 10px;
+		}
 		@include rwdw(991){
 			border-left:0px;
 			border-top:1px solid $white;
@@ -663,12 +772,56 @@ button {
 		}
 	}
 }
+.content{
+	margin-top:50px;
+	@include rwdw(991){
+		margin-top:40px;
+	}
+	&__area{
+		padding:30px 0;
+	}
+}
 
+.titleBanner{
+	
+	img{
+		width:100%;
+	}
+}
+.game{
+	background-size:cover;
+	background-position:top center;
+	background-repeat: no-repeat;
+	min-height: 1400px;
+	@include rwdw(1440){
+		min-height: 1200px;
+	}
+	@include rwdw(1199){
+		min-height: 1000px;
+	}
+	@include rwdw(991){
+		background-image: url('../images/game-BG-m.png')!important;
+		min-height: auto;
+		padding-bottom: 30px;
+	}
+	&__video{
+		padding-top:100px;
+		@include rwdw(991){
+			padding-top:30px;
+		}
+	}
+	&__info{
+		padding:30px 0 0;
+		img{
+			width:100%;
+		}
+	}
+}
 .footer {
 	float: left;
 	width: 100%;
 	color: #efefef;
-	padding: 30px 0 20px;
+	
 	p {
 		font-size: 14.4px;
 		line-height: 1.5;

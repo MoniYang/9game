@@ -55,26 +55,23 @@
     <section class="main">
       <div class="content">
         <div class="titleBanner">
-          <img src="images/contactBanner.png" alt="">
+          <img src="images/zh-tw/Banner.png" alt="">
       </div>
-      <div class="container">
-        <div class="d-flex justify-content-center align-items-center flex-column content__area">
-          <h3 class="text-theme">聯絡我們</h3>
-          <div class="col-md-4 ">
-            <p>如果你有任何建議或問題
-              或需要我們的幫助或服務
-              請選擇以下方式聯繫我們</p>
-          </div>
+      <div class="game" style="background-image: url('images/game-BG.png');">
+        <div class="container">
+            <div class="game__video">
+                <div class="col-lg-6">
+                    <div class="terms_box">
+                        <iframe width="100%" src="https://www.youtube.com/embed/8It8QnrfcMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="game__info">
+                        <img src="images/zh-tw/Slogan.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
+          
       </div>
-      <div class="social__inner">
-        <ul>
-          <li class="social--messenger"> <a href=""><i class="fab fa-facebook-messenger"></i></a></li>
-          <li class="social--lineicon"><a href=""><i class="fab fa-line"></i></a></li>
-        </ul>
-      </div>
-     
-     
     </section>
     
     <div id="footer" class="footer">
@@ -297,22 +294,22 @@
   <script src="scripts/owl.carousel.js"></script>
 
   <script src="scripts/custom.js"></script>
-  <div id="fb-root"></div>
-  <script>
-      window.fbAsyncInit = function() { FB.init({
-      xfbml : true,
-      version : 'v11.0' });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js'; fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-      <!-- Your Chat Plugin code --> 
-      <div class="fb-customerchat"
-      attribution="setup_tool"
-      page_id="104167105257980"> </div>
+ <!-- Load Facebook SDK for JavaScript --> 
+ <div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() { FB.init({
+    xfbml : true,
+    version : 'v11.0' });
+    };
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js'; fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Your Chat Plugin code --> <div class="fb-customerchat"
+    attribution="setup_tool"
+    page_id="104167105257980"> </div>
 </body>
 
 </html>

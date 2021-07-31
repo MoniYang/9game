@@ -128,6 +128,11 @@ $btn-config:(
 		bg: $yellow,
 
   ),
+  theme:(
+		class: 'theme',
+    color: $theme,
+		bg: $theme,
+  ),
  
 );
 
@@ -187,6 +192,7 @@ $btn-config:(
     background-color:$color;
   }
 }
+
 
 @mixin button-bg($bg, $text , $bg_2 , $text_2) {
   background: $bg;
