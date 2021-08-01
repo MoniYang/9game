@@ -87,18 +87,18 @@
         align-items: center;
     }
     button.owl-dot{
-        width:10px;
-        height:10px;
+        width:8px;
+        height:8px;
         display: block;
-        background:$gray;
+        background:$white;
 
         border-radius: 100%;
         margin:3px!important;
         &.active{
-            width:15px;
-        height:15px;
+            width:10px;
+        height:10px;
         display: block;
-        background: linear-gradient(to right,  #f7ce00 26%, #fcf9a9 41%, #fffcdb 44%, #f9f490 62%, #f2a900 87%,  #fcf649 100%);
+        background: $theme;
         border-radius: 100%;
         }
 

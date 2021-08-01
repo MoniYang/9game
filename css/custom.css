@@ -695,18 +695,18 @@
   align-items: center;
 }
 .owl-carousel button.owl-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   display: block;
-  background: #aaa;
+  background: #fff;
   border-radius: 100%;
   margin: 3px !important;
 }
 .owl-carousel button.owl-dot.active {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   display: block;
-  background: linear-gradient(to right, #f7ce00 26%, #fcf9a9 41%, #fffcdb 44%, #f9f490 62%, #f2a900 87%, #fcf649 100%);
+  background: #963af1;
   border-radius: 100%;
 }
 .owl-carousel.owl-loaded {
@@ -1017,6 +1017,17 @@ input[type=checkbox]:checked + label span:after {
   width: 100%;
   color: #963af1;
 }
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.575em;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 1.3125em;
+  }
+}
 
 #nav-border {
   width: 100%;
@@ -1188,10 +1199,6 @@ button:focus {
   padding: 0 10px;
 }
 
-.index_slider {
-  padding-top: 55px;
-}
-
 .mobieUserInfo--btn {
   width: 100%;
 }
@@ -1222,7 +1229,6 @@ button:focus {
   justify-content: center;
   display: flex;
   padding: 0px;
-  flex-direction: column;
 }
 .modal-content {
   padding: 20px;
@@ -1359,6 +1365,11 @@ button:focus {
     padding: 30px 0;
   }
 }
+@media only screen and (max-width: 768px) {
+  .game_slider {
+    padding: 20px 0;
+  }
+}
 .game_slider a {
   color: #963af1;
 }
@@ -1371,16 +1382,36 @@ button:focus {
   text-align: center;
   margin-bottom: 0px;
 }
+@media only screen and (max-width: 768px) {
+  .game_slider a p {
+    font-size: 0.875em;
+  }
+}
 
 .newsSlider {
   background-color: #efefef;
   padding: 50px 0;
   display: flex;
 }
+@media only screen and (max-width: 768px) {
+  .newsSlider {
+    padding: 20px 0;
+  }
+}
 .newsSlider p {
   text-align: center;
   margin-bottom: 0px;
   line-height: 1.5;
+}
+@media only screen and (max-width: 768px) {
+  .newsSlider p {
+    font-size: 0.9625em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .newsSlider p {
+    font-size: 0.875em;
+  }
 }
 
 .indexInfo {
@@ -1408,15 +1439,32 @@ button:focus {
 .indexInfo__textContent {
   padding: 50px 10%;
 }
+@media only screen and (max-width: 768px) {
+  .indexInfo__textContent {
+    padding: 30px 10%;
+  }
+}
 .indexInfo--title {
   color: #963af1;
   font-weight: bold;
   font-size: 1.75em;
 }
+@media only screen and (max-width: 480px) {
+  .indexInfo--title {
+    font-size: 1.4875em;
+  }
+}
 .indexInfo--text {
   font-size: 1.3125em;
   color: #1a1a1a;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 480px) {
+  .indexInfo--text {
+    font-size: 1.05em;
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
 }
 
 .social__area {
@@ -1434,6 +1482,11 @@ button:focus {
 .social--item i {
   color: #fff;
   font-size: 2.625em;
+}
+@media only screen and (max-width: 480px) {
+  .social--item i {
+    font-size: 1.75em;
+  }
 }
 .social--fb {
   background-color: #0076fb;
@@ -1467,28 +1520,67 @@ button:focus {
 .social__inner ul li a i {
   font-size: 4.375em;
 }
-
-.index__gameArea {
-  padding: 0px 10% 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-top: -3%;
-  position: relative;
-  z-index: 1;
+.social__inner ul li img {
+  max-width: 80px;
 }
-@media only screen and (max-width: 991px) {
-  .index__gameArea {
-    margin-top: 0px;
+@media only screen and (max-width: 768px) {
+  .social__inner ul li img {
+    max-width: 60px;
   }
+}
+
+.index_slider {
+  padding-top: 55px;
+}
+@media only screen and (max-width: 480px) {
+  .index_slider {
+    padding-top: 40px;
+  }
+}
+.index_slider.owl-theme .owl-dots {
+  margin-top: -40px !important;
+  position: absolute;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .index_slider.owl-theme .owl-dots {
+    margin-top: -20px !important;
+  }
+}
+.index_slider .item {
+  background-size: cover;
+  background-position: center;
+  height: 650px;
 }
 @media only screen and (max-width: 1199px) {
-  .index__gameArea {
-    padding: 0 5% 20px;
+  .index_slider .item {
+    height: 500px;
   }
 }
-.index__gameArea img {
-  max-width: 100%;
+@media only screen and (max-width: 1024px) {
+  .index_slider .item {
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .index_slider .item {
+    height: 380px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .index_slider .item {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .index_slider .item {
+    height: 230px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .index_slider .item {
+    height: 180px;
+  }
 }
 
 .close {
@@ -1627,7 +1719,7 @@ button:focus {
 }
 @media only screen and (max-width: 480px) {
   .logo img {
-    max-width: 100px;
+    max-width: 200px;
   }
 }
 

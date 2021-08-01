@@ -91,199 +91,230 @@
     </div>
   </div>
   <div class="modal fade " id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog  modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="LoginModalLabel">會員登入</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  aria-hidden="true">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">會員登入</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <ul class="loginIcon ">
+          <li >
+            <button><img src="images/icon/google.png" alt="" data-dismiss="modal"></button>
+          </li>
+          <li >
+            <button><img src="images/icon/facebook.png" alt="" data-dismiss="modal"></button>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer flex-column">
+        <div class="d-flex flex-row">
+          <input type="checkbox" name="cc" />
+          <button data-toggle="modal" data-target="#TermsModal">我同意使用者條款</button>
         </div>
-        <div class="modal-body d-flex justify-content-center">
-          <ul class="loginIcon ">
-            <li>
-              <button><img src="images/icon/google.png" alt=""></button>
-            </li>
-            <li >
-              <button><img src="images/icon/facebook.png" alt=""></button>
-            </li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <div class="d-flex flex-row">
-            <input type="checkbox" name="cc" />
-            <button data-toggle="modal" data-target="#TermsModal">我同意使用者條款</button>
-          </div>
-          <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
-        </div>
+        <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="TermsModal" tabindex="-1" role="dialog" aria-labelledby="TermsModalLabel" aria-hidden="true">
-    <div class="modal-dialog terms modal-md">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <h5 class="modal-title">點數儲值</h5>
-          <h5 class="modal-title">選擇Gash金額</h5> -->
-          <h5 class="modal-title">使用者條款</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+</div>
+  <div class="modal fade " id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">會員登入</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <ul class="loginIcon ">
+          <li >
+            <button><img src="images/icon/google.png" alt="" data-dismiss="modal"></button>
+          </li>
+          <li >
+            <button><img src="images/icon/facebook.png" alt="" data-dismiss="modal"></button>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer flex-column">
+        <div class="d-flex flex-row">
+          <input type="checkbox" name="cc" />
+          <button data-toggle="modal" data-target="#TermsModal">我同意使用者條款</button>
         </div>
-        <div class="modal-body">
-          <div class="terms_box">
-            <iframe src="https://www.lipsum.com/feed/html" width="100%" frameborder="0"></iframe>
-          </div>  
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="defult_btn" data-dismiss="modal">關閉</button>
-        </div>
+        <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="DepositModal" tabindex="-1" role="dialog" aria-labelledby="DepositModalLabel" aria-hidden="true">
-    <div class="modal-dialog deposit modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <h5 class="modal-title">點數儲值</h5>
-          <h5 class="modal-title">選擇Gash金額</h5> -->
-          <h5 class="modal-title">儲值Gash金額</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <ul class="d-none flex-column justify-content-center deposit__list ">
-            <li>
-              <button><img src="images/icon/gash.png" alt=""></button>
-            </li>
-            <li >
-              <button><img src="images/icon/mycard.png" alt=""></button>
-            </li>
-          </ul>
-          <!-- <ul class="d-flex flex-column justify-content-center deposit__MoneyList">
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$50</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>5,000g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$100</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>10,000g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$150</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>15,000g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$300</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>31,500g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$500</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>55,000g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$1000</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>110,000g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$3000</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>345,000g</li>
-                </ul>
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <ul class="deposit__MoneyItem">
-                  <li>$5000</li>
-                  <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
-                  <li>600,000g</li>
-                </ul>
-              </button>
-            </li>
-          </ul> -->
-          <!-- <ul class="text-white">
-            <li><span>遊戲：</span>9ＧameOnline</li>
-            <li><span>帳號：</span>勇者</li>
-            <li><span>金額：</span>＄300</li>
-          </ul> -->
-          <!-- <ul class="text-white">
-            <li>儲值成功</li>
-            <li><span>目前餘額：</span>300,000g</li>
-          </ul> -->
-          <ul class="text-white">
-            <li>儲值失敗</li>
-            <li><span>目前餘額：</span>＄0</li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
-          <button type="button" class="defult_btn" data-dismiss="modal">確定</button>
-        </div>
+</div>
+<div class="modal fade" id="TermsModal" tabindex="-1" role="dialog" aria-labelledby="TermsModalLabel" aria-hidden="true">
+  <div class="modal-dialog terms modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title">點數儲值</h5>
+        <h5 class="modal-title">選擇Gash金額</h5> -->
+        <h5 class="modal-title">使用者條款</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="terms_box">
+          <iframe src="https://www.lipsum.com/feed/html" width="100%" frameborder="0"></iframe>
+        </div>  
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="defult_btn" data-dismiss="modal">關閉</button>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="ChangeNameModal" tabindex="-1" role="dialog" aria-labelledby="ChangeNameModalLabel"
-    aria-hidden="true" >
-    <div class="modal-dialog  modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ChangeNameModalLabel">更改暱稱</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <ul class="d-flex flex-wrap justify-content-center">
-            <li>
-             <button class="inputText"><i class="fas fa-pen mr-1"></i><span>女神ＡＡＡ</span></button>
-            </li>
-            <li class="inputBox">
-               <input type="text">
-            </li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
-        </div>
+</div>
+<div class="modal fade" id="DepositModal" tabindex="-1" role="dialog" aria-labelledby="DepositModalLabel" aria-hidden="true" >
+  <div class="modal-dialog deposit modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title">點數儲值</h5>
+        <h5 class="modal-title">選擇Gash金額</h5> -->
+        <h5 class="modal-title">儲值Gash金額</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class=" deposit__list ">
+          <li>
+            <button><img src="images/icon/gash.png" alt=""></button>
+          </li>
+          <li >
+            <button><img src="images/icon/mycard.png" alt=""></button>
+          </li>
+        </ul>
+        <ul class="deposit__MoneyList">
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$50</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>5,000g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$100</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>10,000g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$150</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>15,000g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$300</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>31,500g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$500</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>55,000g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$1000</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>110,000g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$3000</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>345,000g</li>
+              </ul>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <ul class="deposit__MoneyItem">
+                <li>$5000</li>
+                <li><span class="text-red"><i class="fas fa-caret-right"></i></span></li>
+                <li>600,000g</li>
+              </ul>
+            </button>
+          </li>
+        </ul>
+        <ul class="deposit__info1 text-white">
+          <li><span>遊戲：</span>9ＧameOnline</li>
+          <li><span>帳號：</span>勇者</li>
+          <li><span>金額：</span>＄300</li>
+        </ul>
+        <ul class="deposit__info2 text-white">
+          <li>儲值成功</li>
+          <li><span>目前餘額：</span>300,000g</li>
+        </ul>
+        <ul class="deposit__info3 text-white">
+          <li>儲值失敗</li>
+          <li><span>目前餘額：</span>＄0</li>
+        </ul>
+      </div>
+      <div class="modal-footer flex-row">
+        <button type="button" id="clear" class="defult_btn">取消</button>
+        <button type="button" id="submit" class="defult_btn">確定</button>
       </div>
     </div>
   </div>
+</div>
+<div class="modal fade" id="ChangeNameModal" tabindex="-1" role="dialog" aria-labelledby="ChangeNameModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ChangeNameModalLabel">更改暱稱</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="d-flex flex-wrap justify-content-center">
+          <li>
+           <button class="inputText"><i class="fas fa-pen mr-1"></i><span>女神ＡＡＡ</span></button>
+          </li>
+          <li class="inputBox" >
+             <input type="text" id="nickName" placeholder="請輸入名稱">
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer flex-row">
+        <button type="button" class="defult_btn" id="reset" >清除</button>
+        <button type="button" class="defult_btn" data-dismiss="modal">確定</button>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

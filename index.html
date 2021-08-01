@@ -46,35 +46,34 @@
                   </ul>
                 </div>
               </div>
-            
               <button class="mobileNav--close"></button>
-            
             </div>  
         </div>
       </div>
     </div>
     <div class="index_slider owl-carousel owl-theme">
-      <div class="item">
-        <img src="images/banner/banner_1.png" alt="">
-      </div>
+      <div class="item" style="background-image: url('images/zh-tw/index_banner_01.jpg');"></div>
+      <div class="item" style="background-image: url('images/zh-tw/index_banner_02.jpg');"></div>
+      <div class="item" style="background-image: url('images/zh-tw/play-9poker.jpg');"></div>
+      <div class="item" style="background-image: url('images/zh-tw/play-68168.jpg');"></div>
     </div>
     <section class="main">
       <div class="container">
         <div class="game_slider owl-carousel owl-theme">
           <div class="item">
-            <a href="">
+            <a href="game.html">
               <img src="images/game/0032.png" alt="">
               <p>遊戲介紹</p>
             </a>
           </div>
           <div class="item">
-            <a href="">
+            <a href="game.html">
               <img src="images/game/0031.png" alt="">
               <p>遊戲介紹</p>
             </a>
           </div>
           <div class="item">
-            <a href="">
+            <a href="game.html">
               <img src="images/game/0026.png" alt="">
               <p>遊戲介紹</p>
             </a>
@@ -116,14 +115,12 @@
         </div>
       </div>
       <div class="social__area">
-        <button class="col-6 social--item social--fb"><i class="fab fa-facebook-f"></i></button>
-        <button class="col-6 social--item social--line"><i class="fab fa-line"></i></button>
+        <a href="https://www.facebook.com/9gameonline" target="_blank" class="col-6 social--item social--fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://lin.ee/tvqjr5u" target="_blank" class="col-6 social--item social--line"><i class="fab fa-line"></i></a>
       </div>
     </section>
-    
     <div id="footer" class="footer">
       <div class="container">
-         
           <div class="col-12">
             <div class="copyright">
               <div class="d-flex flex-wrap">
@@ -149,15 +146,15 @@
         </div>
         <div class="modal-body d-flex justify-content-center">
           <ul class="loginIcon ">
-            <li>
-              <button><img src="images/icon/google.png" alt=""></button>
+            <li >
+              <button><img src="images/icon/google.png" alt="" data-dismiss="modal"></button>
             </li>
             <li >
-              <button><img src="images/icon/facebook.png" alt=""></button>
+              <button><img src="images/icon/facebook.png" alt="" data-dismiss="modal"></button>
             </li>
           </ul>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer flex-column">
           <div class="d-flex flex-row">
             <input type="checkbox" name="cc" />
             <button data-toggle="modal" data-target="#TermsModal">我同意使用者條款</button>
@@ -299,8 +296,8 @@
           </ul>
         </div>
         <div class="modal-footer flex-row">
-          <button type="button" id="clear" class="defult_btn" data-dismiss="modal">取消</button>
-          <button type="button" id="submit" class="defult_btn" data-dismiss="modal">確定</button>
+          <button type="button" id="clear" class="defult_btn">取消</button>
+          <button type="button" id="submit" class="defult_btn">確定</button>
         </div>
       </div>
     </div>
@@ -320,13 +317,13 @@
             <li>
              <button class="inputText"><i class="fas fa-pen mr-1"></i><span>女神ＡＡＡ</span></button>
             </li>
-            <li class="inputBox">
-               <input type="text">
+            <li class="inputBox" >
+               <input type="text" id="nickName" placeholder="請輸入名稱">
             </li>
           </ul>
         </div>
         <div class="modal-footer flex-row">
-          <button type="button" class="defult_btn" data-dismiss="modal">取消</button>
+          <button type="button" class="defult_btn" id="reset" >清除</button>
           <button type="button" class="defult_btn" data-dismiss="modal">確定</button>
         </div>
       </div>
