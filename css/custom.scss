@@ -122,6 +122,14 @@ input[type="checkbox"]:checked + label span {
 	border-radius: 30px;
 	font-size:font(1);
 }
+.defult_btn2{
+	padding:5px 15px;
+	font-size:font(1.5);
+	border-radius: 30px;
+	@include button-bg($theme,$white,$yellow,$black);
+}
+	
+
 .title {
     font-size: font(2.5);
     text-transform: uppercase;
@@ -528,6 +536,7 @@ button {
 	background-color:$light;
 	padding:50px 0;
 	display: flex;
+	
 	@include rwdw(768){
 		padding:20px 0;
 
@@ -536,6 +545,7 @@ button {
 		text-align: center;
 		margin-bottom: 0px;
 		line-height: 1.5;
+		font-size:font(1.5);
 		@include rwdw(768){
 			font-size:font(1.1);
 		}
@@ -547,7 +557,7 @@ button {
 .indexInfo{
 	display:flex;
 	flex-direction: row;
-	min-height:70vh;
+	min-height:50vh;
 	@include rwdw(991){
 		flex-direction: column;
 		min-height:auto;
@@ -557,9 +567,19 @@ button {
 		background-position: center;
 		width:50%;
 		@include rwdw(991){
-			height:450px;
+			
+			height:500px;
 			// flex:1;
 			width:100%;
+		}
+		@include rwdw(767){
+			height:400px;
+		}
+		@include rwdw(480){
+			height:350px;
+		}
+		@include rwdw(375){
+			height:250px;
 		}
 	}
 	&__textContent{
@@ -571,7 +591,7 @@ button {
 	&--title{
 		color:$theme;
 		font-weight: bold;
-		font-size:font(2);
+		font-size:font(2.5);
 		@include rwdw(480){
 			font-size:font(1.7);
 		}
@@ -634,14 +654,29 @@ button {
 			justify-content: center;
 			align-items: center;
 			li{
-				margin:0 20px;
+				display: flex;
+				flex-direction: column;
+				margin:0 40px;
+				justify-content: center;
+				align-items: center;
+				@include rwdw(480){
+					margin:0 20px;
+				}
 				a{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
 					i{
 						font-size:font(5);
 					}
 				}
+				span{
+					margin-top:5px;
+					color:$black;
+				}
 				img{
-					max-width: 80px;
+					// max-width: 80px;
 					@include rwdw(768){
 						max-width: 60px;
 					}
@@ -650,10 +685,13 @@ button {
 		}
 	}
 }
-.index{
 
+.index{
 	&_slider{
-	padding-top:55px;
+	padding-top:70px;
+	@include rwdw(991){
+		padding-top:58px;
+	}
 	@include rwdw(480){
 		padding-top:40px;
 	}
@@ -670,18 +708,15 @@ button {
 	.item{
 		background-size:cover;
 		background-position:center;
-		height:650px;
+		height:500px;
 		@include rwdw(1199){
-			height:500px;
-		}
-		@include rwdw(1024){
-			height:450px;
+			height:400px;
 		}
 		@include rwdw(991){
 			height:380px;
 		}
 		@include rwdw(768){
-			height:300px;
+			height:280px;
 		}
 		@include rwdw(480){
 			height:230px;
@@ -833,35 +868,55 @@ button {
 	}
 }
 .content{
-	margin-top:50px;
+	padding-top:70px;
 	@include rwdw(991){
-		margin-top:40px;
+		padding-top:58px;
+	}
+	@include rwdw(480){
+		padding-top:40px;
 	}
 	&__area{
 		padding:30px 0;
+		
+		p{
+			font-size:font(1.5);
+			margin-bottom: 5px;
+		}
 	}
 }
 
 .titleBanner{
-	
+		height:500px;
+		background-size:cover;
+		background-position: center;
+		@include rwdw(1199){
+			height:400px;
+		}
+		@include rwdw(991){
+			height:380px;
+		}
+		@include rwdw(768){
+			height:280px;
+		}
+		@include rwdw(480){
+			height:230px;
+		}
+		@include rwdw(375){
+			height:180px;
+		}
 	img{
 		width:100%;
 	}
 }
 .game{
-	background-size:cover;
+	background-size:contain;
 	background-position:top center;
 	background-repeat: no-repeat;
-	min-height: 1400px;
-	@include rwdw(1440){
-		min-height: 1200px;
-	}
-	@include rwdw(1199){
-		min-height: 1000px;
-	}
+	
 	@include rwdw(991){
 		background-image: url('../images/game-BG-m.png')!important;
 		min-height: auto;
+		background-size:cover;
 		padding-bottom: 30px;
 	}
 	&__video{
@@ -871,9 +926,12 @@ button {
 		}
 	}
 	&__info{
-		padding:30px 0 0;
+		padding:30px 0;
+		text-align: center;
 		img{
 			width:100%;
+			max-width: 70%;
+			
 		}
 	}
 }
